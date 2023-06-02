@@ -6,6 +6,13 @@ export const Card = styled.div`
 	box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.5rem;
 	padding: 1rem;
 	text-align: center;
+	a {
+		color: ${props => props.theme.colors.secondaryBaseColor};
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 `;
 
 export const ImageWrapper = styled.div`

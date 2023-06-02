@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-	margin: 6.5rem 0 1.625rem 0;
+	background-color: white;
 `;
 
 export const Wrapper = styled.div`
@@ -16,7 +16,12 @@ export const Wrapper = styled.div`
 
 export const TitleWrapper = styled.section``;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+	a {
+		color: ${props => props.theme.colors.secondaryBaseColor};
+		text-decoration: none;
+	}
+`;
 
 export const LoaderWrapper = styled.div`
 	margin-top: 2.5rem;

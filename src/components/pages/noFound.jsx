@@ -1,9 +1,7 @@
 import NoFoundTemplate from "../templates/NoFound";
 
 const NoFound = () => {
-  return (
-    <NoFoundTemplate />
-  );
+  return <NoFoundTemplate />;
 };
 
 export default NoFound;

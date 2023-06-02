@@ -5,17 +5,38 @@ export const Card = styled.div`
 	border-radius: 0px 0.5rem 0.5rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0rem 0.25rem 0.5rem;
 	padding: 1rem;
-	text-align: center;
-`;
+	display: flex;
 
-export const ImageWrapper = styled.div`
-	img {
-		width: 85%;
+	@media ${props => props.theme.device.laptop} { 
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		text-align: center;
 	}
 `;
 
-export const Title = styled.h4``;
+export const CardItem = styled.div`
+	width: 100%;
+`;
 
-export const Subtitle = styled.h5``;
+export const ImageWrapper = styled.div`
+	margin-bottom: 1rem;
+	img {
+		width: 35%;
+
+		@media ${props => props.theme.device.laptop} { 
+			width: 85%;
+		}
+	}
+`;
+
+export const Title = styled.h4`
+	margin: 0 0 1rem;
+`;
+
+export const Subtitle = styled.h5`
+	margin: 0 0 1rem;
+`;
 
 export const Description = styled.p``;

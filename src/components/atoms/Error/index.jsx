@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Container } from "./style";
 
-const Error = ({message}) => {
+const Error = ({ message }) => {
   return (
     <>
-      <Container>
-				{message}
-			</Container>
+      <Container>{message}</Container>
     </>
   );
 };

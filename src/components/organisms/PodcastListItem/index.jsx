@@ -1,13 +1,8 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Card, ImageWrapper, Title, Description } from "./style";
 
-const PodcastListItem = ({
-  id,
-  image,
-  name,
-  artist,
-}) => {
+const PodcastListItem = ({ id, image, name, artist }) => {
   return (
     <>
       <Card>
@@ -15,13 +10,9 @@ const PodcastListItem = ({
           <ImageWrapper>
             <img src={image} alt="" />
           </ImageWrapper>
-          <Title>
-            {name}
-          </Title>
-          <Description>
-            Author: {artist}
-          </Description>
+          <Title>{name}</Title>
         </Link>
+        <Description>Author: {artist}</Description>
       </Card>
     </>
   );

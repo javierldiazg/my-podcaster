@@ -1,18 +1,20 @@
-import PropTypes from 'prop-types';
-import EpisodesListItem from '../EpisodesListItem';
-import { Wrapper, Card, Title, ItemsWrapper, HeaderWrapper, TitleHeader, DateHeader, DurationHeader } from "./style";
+import PropTypes from "prop-types";
+import EpisodesListItem from "../EpisodesListItem";
+import {
+  Wrapper,
+  Card,
+  Title,
+  ItemsWrapper,
+  HeaderWrapper,
+  TitleHeader,
+  DateHeader,
+  DurationHeader,
+} from "./style";
 
-const EpisodesList = ({
-  podcastId,
-  items,
-}) => {
+const EpisodesList = ({ podcastId, items }) => {
   const renderList = (podcastId) => {
     return items.map((item, i) => {
-      return <EpisodesListItem
-        key={i}
-        podcastId={podcastId}
-        item={item}
-      />;
+      return <EpisodesListItem key={i} podcastId={podcastId} item={item} />;
     });
   };
 
@@ -25,7 +27,7 @@ const EpisodesList = ({
             <HeaderWrapper>
               <TitleHeader>Title</TitleHeader>
               <DateHeader>Date</DateHeader>
-              <DurationHeader>Duration</DurationHeader>
+              <DurationHeader>Durat.</DurationHeader>
             </HeaderWrapper>
             {items.length > 0 && renderList(podcastId)}
           </ItemsWrapper>

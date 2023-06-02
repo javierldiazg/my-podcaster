@@ -1,9 +1,7 @@
 import PodcastTemplate from "../templates/Podcast";
 
 const Podcast = () => {
-  return (
-    <PodcastTemplate />
-  );
+  return <PodcastTemplate />;
 };
 
 export default Podcast;

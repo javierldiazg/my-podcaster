@@ -17,20 +17,32 @@ export const HeaderWrapper = styled.div`
 	margin-bottom: 1rem;
 	display: flex;
 	flex-wrap: wrap;
-  justify-content: space-between;
+  	justify-content: space-between;
 	font-weight: bold;
 `;
 
 export const TitleHeader = styled.div`
-	width: 70%;
-	font
+	width: 60%;
+
+	@media ${props => props.theme.device.laptop} { 
+		width: 70%;
+	}
 `;
 
 export const DateHeader = styled.div`
-	width: 20%;
+	width: 15%;
+
+	@media ${props => props.theme.device.laptop} { 
+		width: 20%;
+	}
 `;
 
 export const DurationHeader = styled.div`
 	width: 10%;
+	text-align: center;
+
+	@media ${props => props.theme.device.laptop} { 
+		width: 10%;
+	}
 `;
 

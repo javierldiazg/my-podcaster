@@ -7,9 +7,7 @@ const NoFoundTemplate = () => {
     <>
       <Container>
         <Header />
-        <MainWraper>
-          Page no found here...
-        </MainWraper>
+        <MainWraper>Page no Found</MainWraper>
         <Footer />
       </Container>
     </>

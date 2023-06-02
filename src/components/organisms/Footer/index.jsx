@@ -1,11 +1,14 @@
-import { Container, Wrapper } from "./style";
+import { Container, Wrapper, Description } from "./style";
 
 const Footer = () => {
   return (
     <>
       <Container>
         <Wrapper>
-          Footer Here
+          <Description>
+            By. JavierLDiazG <br />
+            Sr Web UI Developer
+          </Description>
         </Wrapper>
       </Container>
     </>

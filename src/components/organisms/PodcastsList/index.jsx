@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import PodcastListItem from "../PodcastListItem";
-import { Wrapper, FormWrapper } from "./style";
+import { Wrapper, FormWrapper, CountWrapper } from "./style";
 
 const PodcastsList = ({ items }) => {
   const [filteredItems, setFilteredItems] = useState(items);
@@ -34,6 +34,7 @@ const PodcastsList = ({ items }) => {
   return (
     <>
       <FormWrapper>
+        <CountWrapper>{filteredItems.length}</CountWrapper>
         <form>
           <input
             name="search"

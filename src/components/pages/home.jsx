@@ -1,9 +1,7 @@
 import HomeTemplate from "../templates/Home";
 
 const Home = () => {
-  return (
-    <HomeTemplate />
-  );
+  return <HomeTemplate />;
 };
 
 export default Home;

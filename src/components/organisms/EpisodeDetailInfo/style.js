@@ -7,7 +7,9 @@ export const Card = styled.section`
 	padding: 1rem;
 `;
 
-export const Title = styled.h4``;
+export const Title = styled.h2`
+	color: ${props => props.theme.colors.secondaryBaseColor};
+`;
 
 export const Description = styled.p``;
 

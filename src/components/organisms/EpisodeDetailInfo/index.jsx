@@ -1,16 +1,12 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import { Card, Title, Description, AudioWrapper } from "./style";
 
-const EpisodeDetailInfo = ({info}) => {
+const EpisodeDetailInfo = ({ info }) => {
   return (
     <>
       <Card>
-        <Title>
-          {info?.trackName}
-        </Title>
-        <Description>
-          {info?.description}
-        </Description>
+        <Title>{info?.trackName}</Title>
+        <Description dangerouslySetInnerHTML={{ __html: info?.description }} />
         <AudioWrapper>
           <audio controls>
             <source src={info?.episodeUrl} type="audio/mpeg" />
