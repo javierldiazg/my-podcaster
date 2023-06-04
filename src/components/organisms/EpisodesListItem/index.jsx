@@ -3,7 +3,8 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import { Wrapper, Title, Date, Duration } from "./style";
 
-const EpisodesListItem = ({ podcastId, item }) => {
+const EpisodesListItem = ({ podcastId, item, isOdd }) => {
+  const odd = isOdd ? "odd" : null;
   const convertMsToTime = (milliseconds) => {
     let seconds = Math.floor(milliseconds / 1000);
     let minutes = Math.floor(seconds / 60);
@@ -18,7 +19,7 @@ const EpisodesListItem = ({ podcastId, item }) => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper className={odd}>
         <Title>
           <Link to={`/podcast/${podcastId}/episode/${item?.trackId}`}>
             {item?.trackName}
@@ -34,6 +35,7 @@ const EpisodesListItem = ({ podcastId, item }) => {
 EpisodesListItem.propTypes = {
   podcastId: PropTypes.string,
   item: PropTypes.object,
+  isOdd: PropTypes.bool,
 };
 
 export default EpisodesListItem;

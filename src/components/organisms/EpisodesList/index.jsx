@@ -14,7 +14,14 @@ import {
 const EpisodesList = ({ podcastId, items }) => {
   const renderList = (podcastId) => {
     return items.map((item, i) => {
-      return <EpisodesListItem key={i} podcastId={podcastId} item={item} />;
+      return (
+        <EpisodesListItem
+          key={i}
+          podcastId={podcastId}
+          item={item}
+          isOdd={i % 2 == 0}
+        />
+      );
     });
   };
 
@@ -27,7 +34,7 @@ const EpisodesList = ({ podcastId, items }) => {
             <HeaderWrapper>
               <TitleHeader>Title</TitleHeader>
               <DateHeader>Date</DateHeader>
-              <DurationHeader>Durat.</DurationHeader>
+              <DurationHeader>Time</DurationHeader>
             </HeaderWrapper>
             {items.length > 0 && renderList(podcastId)}
           </ItemsWrapper>

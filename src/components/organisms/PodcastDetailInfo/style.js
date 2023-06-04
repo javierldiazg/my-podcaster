@@ -33,10 +33,24 @@ export const ImageWrapper = styled.div`
 
 export const Title = styled.h4`
 	margin: 0 0 1rem;
+	a {
+		color: ${props => props.theme.colors.secondaryBaseColor};
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 `;
 
 export const Subtitle = styled.h5`
 	margin: 0 0 1rem;
+	a {
+		color: ${props => props.theme.colors.secondaryBaseColor};
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 `;
 
 export const Description = styled.p``;

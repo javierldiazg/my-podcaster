@@ -34,7 +34,7 @@ const EpisodeDetail = () => {
     result = (
       <>
         <AsideWrapper>
-          <PodcastDetailInfo info={podcastInfo} />
+          <PodcastDetailInfo podcastId={podcastId} info={podcastInfo} />
         </AsideWrapper>
         <ContentWrapper>
           <EpisodeDetailInfo info={episodeInfo} />

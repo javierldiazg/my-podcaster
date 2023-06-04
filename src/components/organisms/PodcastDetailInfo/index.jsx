@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import {
   Card,
   CardItem,
@@ -8,19 +9,30 @@ import {
   Description,
 } from "./style";
 
-const PodcastDetailInfo = ({ info }) => {
+const PodcastDetailInfo = ({ podcastId, info }) => {
   return (
     <>
       <Card>
         <CardItem>
-          <ImageWrapper>
-            <img src={info?.artworkUrl600} alt="" />
-          </ImageWrapper>
+          <Link to={`/podcast/${podcastId}`}>
+            <ImageWrapper>
+              <img src={info?.artworkUrl600} alt="" />
+            </ImageWrapper>
+          </Link>
         </CardItem>
         <CardItem>
-          <Title>{info?.trackName}</Title>
-          <Subtitle>by {info?.artistName}</Subtitle>
-          <Description></Description>
+          <Title>
+            <Link to={`/podcast/${podcastId}`}>
+              {info?.trackName}
+            </Link>
+          </Title>
+          <Subtitle>
+            by &nbsp; 
+            <Link to={`/podcast/${podcastId}`}>
+              {info?.artistName}
+            </Link>
+          </Subtitle>
+          <Description>Description...</Description>
         </CardItem>
       </Card>
     </>
@@ -28,6 +40,7 @@ const PodcastDetailInfo = ({ info }) => {
 };
 
 PodcastDetailInfo.propTypes = {
+  podcastId: PropTypes.string,
   info: PropTypes.object,
 };
 

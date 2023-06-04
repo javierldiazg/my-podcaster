@@ -11,10 +11,13 @@ export const Title = styled.h2`
 	color: ${props => props.theme.colors.secondaryBaseColor};
 `;
 
-export const Description = styled.p``;
+export const Description = styled.div`
+	margin: 0 0 2rem;
+	font-style: italic;
+`;
 
 export const AudioWrapper = styled.div`
-	margin: 1rem 0;
+	margin: 0 0 2rem;
 	audio {
 		width: 100%;
 	}

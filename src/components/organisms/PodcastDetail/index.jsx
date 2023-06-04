@@ -28,7 +28,7 @@ const PodcastDetail = () => {
     result = (
       <>
         <AsideWrapper>
-          <PodcastDetailInfo info={podcastInfo} />
+          <PodcastDetailInfo podcastId={podcastId} info={podcastInfo} />
         </AsideWrapper>
         <ContentWrapper>
           <EpisodesList podcastId={podcastId} items={episodeList} />
